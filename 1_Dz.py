@@ -1,9 +1,4 @@
-from typing import Any
 
-import random
-import reque
-import random
-import requests
 
 def get_number_info(number: int) -> str:
     url = f"http://numbersapi.com/{number}"
