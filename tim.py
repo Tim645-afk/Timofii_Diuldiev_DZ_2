@@ -27,7 +27,22 @@ print(persons)
 Tim_birthday = Tim.get_birthday_year()
 print(Tim_birthday)
 
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
 
+    def area(self):
+        return self.length * self.width
+
+    def diagonal(self):
+        return (self.length ** 2 + self.width ** 2) ** 0.5
+
+    def __str__(self):
+        return f"Rectangle({self.length} x {self.width})"
+
+    def __repr__(self):
+        return f"Rectangle({self.length}, {self.width})"
 
 
 
