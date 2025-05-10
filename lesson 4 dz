@@ -1,0 +1,33 @@
+import math
+
+class Point:
+
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+
+    def __str__(self):
+        return f"({self.x}, {self.y})"
+
+
+class Circle:
+
+    def __init__(self, center, radius):
+        if not isinstance(center, Point):
+            raise TypeError("center має бути об'єктом класу Point")
+        if radius <= 0:
+            raise ValueError("Радіус має бути додатнім числом")
+
+        self.center = center
+        self.radius = radius
+
+    def area(self):
+
+        return math.pi * self.radius ** 2
+
+    def circumference(self):
+        "
+        return 2 * math.pi * self.radius
+
+    def __str__(self):
+        return f"Коло з центром у точці {self.center} і радіусом {self.radius}"
